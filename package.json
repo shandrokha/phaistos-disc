@@ -1,0 +1,19 @@
+{
+  "name": "phaistos-disc",
+  "private": true,
+  "description": "Interactive analysis workbench for the Phaistos Disc",
+  "scripts": {
+    "build": "esbuild app/js/app.mjs --bundle --outfile=app/dist/app.bundle.js --format=iife --platform=browser --global-name=PhaistosApp --external:chart.js --external:chartjs-plugin-annotation && esbuild app/js/mc-worker.mjs --bundle --outfile=app/dist/mc-worker.bundle.js --format=iife --platform=browser",
+    "serve": "npx serve app -p 3000",
+    "verify-canonical": "node scripts/verify-canonical.mjs",
+    "verify-docs": "node scripts/verify-docs.mjs",
+    "verify-prose": "node scripts/verify-prose.mjs",
+    "verify-engine-invariants": "node scripts/verify-engine-invariants.mjs",
+    "verify-framing": "node scripts/verify-framing.mjs",
+    "test-engine-units": "node scripts/test-engine-units.mjs",
+    "verify-all": "npm run verify-canonical && npm run verify-docs && npm run verify-prose && npm run verify-engine-invariants && npm run verify-framing && npm run test-engine-units"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}

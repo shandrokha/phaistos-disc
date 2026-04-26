@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "iterations": 100000,
+  "tolerancePValue": 0.001,
+  "comparison": [
+    {
+      "id": "minoan",
+      "name": "Minoan / Linear A",
+      "corpusSize": 34,
+      "effectiveSize": 34,
+      "overlap": 9,
+      "pValue": 0.0318,
+      "fwPValue": 0.7061,
+      "holmP": 0.2858,
+      "hyperP": 0.0022
+    },
+    {
+      "id": "hittite",
+      "name": "Hittite (Rasmussen)",
+      "corpusSize": 50,
+      "effectiveSize": 50,
+      "overlap": 8,
+      "pValue": 0.1012,
+      "fwPValue": 0.8953,
+      "holmP": 0.8098,
+      "hyperP": 0.0118
+    },
+    {
+      "id": "luwian",
+      "name": "Luwian (Anatolian)",
+      "corpusSize": 72,
+      "effectiveSize": 71,
+      "overlap": 8,
+      "pValue": 0.1765,
+      "fwPValue": 0.9988,
+      "holmP": 1,
+      "hyperP": 0.0255
+    },
+    {
+      "id": "greek",
+      "name": "Mycenaean Greek",
+      "corpusSize": 67,
+      "effectiveSize": 67,
+      "overlap": 4,
+      "pValue": 0.6362,
+      "fwPValue": 0.9058,
+      "holmP": 1,
+      "hyperP": 0.3221
+    },
+    {
+      "id": "pfu",
+      "name": "Proto-Finno-Ugric",
+      "corpusSize": 50,
+      "effectiveSize": 50,
+      "overlap": 2,
+      "pValue": 0.7188,
+      "fwPValue": 0.9037,
+      "holmP": 1,
+      "hyperP": 0.4936
+    },
+    {
+      "id": "hurrian",
+      "name": "Hurrian",
+      "corpusSize": 50,
+      "effectiveSize": 50,
+      "overlap": 2,
+      "pValue": 0.8102,
+      "fwPValue": 0.9751,
+      "holmP": 1,
+      "hyperP": 0.5981
+    },
+    {
+      "id": "semitic",
+      "name": "West Semitic",
+      "corpusSize": 60,
+      "effectiveSize": 60,
+      "overlap": 1,
+      "pValue": 0.988,
+      "fwPValue": 1,
+      "holmP": 1,
+      "hyperP": 0.9495
+    },
+    {
+      "id": "egyptian",
+      "name": "Middle Egyptian",
+      "corpusSize": 50,
+      "effectiveSize": 48,
+      "overlap": 0,
+      "pValue": 1,
+      "fwPValue": 1,
+      "holmP": 1,
+      "hyperP": 1
+    },
+    {
+      "id": "etruscan",
+      "name": "Etruscan/Tyrsenian",
+      "corpusSize": 44,
+      "effectiveSize": 42,
+      "overlap": 0,
+      "pValue": 1,
+      "fwPValue": 1,
+      "holmP": 1,
+      "hyperP": 1
+    }
+  ],
+  "sign02": {
+    "det": {
+      "overlap": 9,
+      "pValue": 0.0318
+    },
+    "phon": {
+      "overlap": 9,
+      "pValue": 0.0562
+    }
+  },
+  "sign18rju": {
+    "overlap": 9,
+    "pValue": 0.0307
+  },
+  "circularity": {
+    "realOverlap": 9,
+    "uniformP": 0.0047,
+    "freqWeightedP": 0.3647,
+    "spearmanRho": 0.257,
+    "tierSweep": [
+      {
+        "tierCount": 2,
+        "freqWeightedP": 0.1853,
+        "tierSizes": [
+          22,
+          21
+        ]
+      },
+      {
+        "tierCount": 3,
+        "freqWeightedP": 0.3647,
+        "tierSizes": [
+          15,
+          15,
+          13
+        ]
+      },
+      {
+        "tierCount": 5,
+        "freqWeightedP": 0.4377,
+        "tierSizes": [
+          9,
+          9,
+          9,
+          8,
+          8
+        ]
+      },
+      {
+        "tierCount": 10,
+        "freqWeightedP": 0.5733,
+        "tierSizes": [
+          5,
+          5,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      }
+    ]
+  },
+  "leavePD": {
+    "full": {
+      "overlap": 9,
+      "pValue": 0.0318,
+      "corpusSize": 34
+    },
+    "filtered": {
+      "overlap": 5,
+      "pValue": 0.2608,
+      "corpusSize": 24
+    },
+    "droppedCount": 10,
+    "droppedFraction": 0.2941
+  },
+  "qeBinding": {
+    "s02InitialCount": 19,
+    "s02FollowedByS12": 13,
+    "s12FollowerCount": 17,
+    "totalFollowers": 180,
+    "exactP": 2.624632773127958e-12
+  },
+  "fullCorpus": {
+    "overlap": 10,
+    "pValue": 0.0305,
+    "corpusSize": 49
+  },
+  "reversal": {
+    "forwardOverlap": 9,
+    "forwardP": 0.0318,
+    "reversedOverlap": 4,
+    "reversedP": 0.6485
+  },
+  "disc": {
+    "tokens": 241,
+    "wordGroups": 61,
+    "distinctSigns": 45,
+    "distinctBigrams": 52
+  }
+}

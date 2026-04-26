@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; connect-src 'self' https://cdn.jsdelivr.net; img-src 'self' data: https://upload.wikimedia.org; font-src 'self' https://cdn.jsdelivr.net; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Phaistos Disc — Interactive Analysis Workbench</title>
+  <meta name="description" content="Interactive, reproducible analysis workbench for the Phaistos Disc. Client-side Monte Carlo simulations comparing nine ancient languages.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css" integrity="sha384-7P0NVe9LPDbUCAF+fH2R8Egwz1uqNH83Ns/bfJY0fN2XCDBMUI2S9gGzIOIRBKsA" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="app-layout">
+    <nav class="sidebar" aria-label="Main navigation">
+      <header class="sidebar-header">
+        <h1>Phaistos Disc</h1>
+        <p class="subtitle">Analysis Workbench</p>
+      </header>
+      <ul class="nav-list">
+        <li><a href="#overview" class="nav-link active" data-section="overview">Overview</a></li>
+        <li><a href="#reading" class="nav-link" data-section="reading">Phonetic Reading</a></li>
+        <li><a href="#validation" class="nav-link" data-section="validation">Validation</a></li>
+        <li><a href="#morphology" class="nav-link" data-section="morphology">Morphology</a></li>
+        <li><a href="#comparison" class="nav-link" data-section="comparison">Language Comparison</a></li>
+        <li><a href="#sensitivity" class="nav-link" data-section="sensitivity">Sensitivity</a></li>
+        <li><a href="#extended" class="nav-link" data-section="extended">Extended Analysis</a></li>
+        <li><a href="#davis" class="nav-link" data-section="davis">Davis Replication</a></li>
+        <li><a href="#methodology" class="nav-link" data-section="methodology">Methodology</a></li>
+      </ul>
+      <footer class="sidebar-footer">
+        <div class="mc-control">
+          <label for="mc-iterations">MC Iterations</label>
+          <input type="number" id="mc-iterations" value="100000" min="1000" max="10000000" step="1000">
+          <small class="mc-hint">Used by Run buttons in <a href="#comparison">Language Comparison</a>, <a href="#sensitivity">Sensitivity</a>, and <a href="#extended">Extended Analysis</a>.</small>
+        </div>
+        <div class="sidebar-credit">
+          <p>By <a href="mailto:siarhei.shandrokha@gmail.com">Shiarhei Shandrokha</a></p>
+          <p><a href="https://github.com/shandrokha/phaistos-disc" target="_blank" rel="noopener">Source on GitHub</a> &middot; CC&nbsp;BY-SA&nbsp;4.0</p>
+        </div>
+      </footer>
+    </nav>
+    <main class="content" id="main-content" tabindex="-1">
+      <div id="live-region" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js" integrity="sha384-T/4KgSWuZEPozpPz7rnnp/5lDSnpY1VPJCojf1S81uTHS1E38qgLfMgVsAeRCWc4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.1.0/dist/chartjs-plugin-annotation.min.js" integrity="sha384-3N9GHhCtN3CQef6tNfqgZlv7sQLYIkcChN+uaTZ7xVdzKYp/SjBNPxa92+hM7EAY" crossorigin="anonymous"></script>
+  <script src="dist/app.bundle.js" defer></script>
+</body>
+</html>

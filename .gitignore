@@ -1,0 +1,9 @@
+# IMPORTANT: app/dist/*.bundle.js is intentionally tracked. The
+# verify-bundle CI gate hashes the committed bundles against a fresh
+# esbuild output. Do NOT add `dist/` here.
+
+node_modules/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

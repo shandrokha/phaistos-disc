@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Build bundles
+        run: npm run build
+
+      - name: Bundle freshness gate
+        run: |
+          if ! git diff --exit-code -- app/dist/; then
+            echo "::error::Committed bundles in app/dist/ are out of sync with sources. Run 'npm run build' locally and commit the result."
+            exit 1
+          fi
+
+      # Documentation drift defence: fails if a known-superseded canonical
+      # value (e.g. an old Minoan p of 0.0283 or 2.8%) appears in scanned
+      # docs outside an explicitly-marked historical block.
+      - name: Verify documentation has no stale canonical values
+        run: npm run verify-docs
+
+      # Engine-vs-app constants gate: re-runs the canonical Monte-Carlo
+      # comparisons and the sensitivity battery, then asserts each result
+      # matches the value baked into the app's PRE_COMPUTED constants.
+      # This is the public repo's primary defence against the
+      # "engine evolved, prose did not" failure mode.
+      - name: Verify canonical values match engine output
+        run: npm run verify-canonical
+
+      # Prose-vs-manifest gate: every documented p-value-shaped number
+      # must either match a value in scripts/canonical-values.json or
+      # sit inside an explicit <!-- canonical-exempt:start --> block.
+      # Catches numbers that drift in prose without being updated when
+      # the engine output changes.
+      - name: Verify prose against canonical manifest
+        run: npm run verify-prose
+
+      # Engine architectural gate: every disc-bigram-producing path
+      # must use the canonical helpers (buildPdBigramsFromWords /
+      # extractKnownPdSegments). Blocks the join+syllabify regression
+      # class that turns `?17` and `??` into spurious bigram syllables.
+      - name: Verify engine invariants
+        run: npm run verify-engine-invariants
+
+      # Intellectual-honesty gate: blocks overclaiming language
+      # ("passes the test", "definitively rules out", etc.) in
+      # public-facing docs.
+      - name: Verify framing language
+        run: npm run verify-framing
+
+      # Engine math unit tests: PRNG determinism, hypergeometric PMF/SF
+      # closed-form sanity, and tier-partitioning invariants. Catches
+      # low-level regressions that the integration-level canonical check
+      # would only surface if a downstream p-value happens to drift.
+      - name: Run engine math unit tests
+        run: npm run test-engine-units
