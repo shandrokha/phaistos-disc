@@ -1,0 +1,56 @@
+# Citation metadata for the Phaistos Disc workbench.
+# Schema: https://citation-file-format.github.io/
+# Once a Zenodo concept DOI is minted, set the top-level `doi:` field below.
+# When both this file and `.zenodo.json` are present, Zenodo uses
+# `.zenodo.json` for the release archive metadata; this file is used by
+# GitHub's "Cite this repository" panel.
+
+cff-version: 1.2.0
+message: "If you use this software in academic work, please cite it as below."
+title: "Phaistos Disc Statistical Analysis Workbench"
+type: software
+version: 1.0.0
+date-released: 2026-05-10
+license: CC-BY-SA-4.0
+repository-code: "https://github.com/shandrokha/phaistos-disc"
+url: "https://shandrokha.github.io/phaistos-disc/app/"
+abstract: >
+  An interactive, browser-based statistical analysis workbench for the
+  Phaistos Disc. Implements a single Monte Carlo framework (100,000
+  iterations per language; seeded mulberry32 PRNG; uniform and
+  frequency-weighted nulls) for testing candidate phonetic readings
+  against nine Bronze Age language hypotheses, with sensitivity
+  analyses, two circularity controls, a leave-PD-inspired-out
+  ablation, a 28-card extended-analysis battery, and continuous-
+  integration gates that enforce numerical consistency between the
+  engine output and every figure cited in the accompanying paper.
+keywords:
+  - Phaistos Disc
+  - Linear A
+  - Minoan
+  - undeciphered scripts
+  - Monte Carlo simulation
+  - computational archaeology
+  - Bronze Age Aegean
+  - reproducible research
+authors:
+  - family-names: Shandrokha
+    given-names: Shiarhei
+    email: siarhei.shandrokha@gmail.com
+    orcid: "https://orcid.org/0009-0000-3345-7531"
+preferred-citation:
+  type: article
+  title: "A Reproducible Multi-Language Statistical Test of Phonetic Readings for the Phaistos Disc"
+  authors:
+    - family-names: Shandrokha
+      given-names: Shiarhei
+      email: siarhei.shandrokha@gmail.com
+      orcid: "https://orcid.org/0009-0000-3345-7531"
+  year: 2026
+  # Once the preprint or journal version has a DOI, fill these in:
+  # doi: "10.48550/arXiv.<NNNN.NNNNN>"   # for arXiv preprint
+  # journal: "Oxford Journal of Archaeology"
+  # volume:
+  # issue:
+  # start:
+  # end:

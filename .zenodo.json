@@ -1,0 +1,35 @@
+{
+  "title": "Phaistos Disc Statistical Analysis Workbench",
+  "version": "1.0.0",
+  "upload_type": "software",
+  "language": "eng",
+  "license": "CC-BY-SA-4.0",
+  "access_right": "open",
+  "description": "An interactive, browser-based statistical analysis workbench for the Phaistos Disc. Implements a single Monte Carlo framework (100,000 iterations per language; seeded mulberry32 PRNG; uniform and frequency-weighted nulls) for testing candidate phonetic readings against nine Bronze Age language hypotheses (Minoan/Linear A, Mycenaean Greek, Luwian, West Semitic, Proto-Finno-Ugric, Middle Egyptian, Hurrian, Etruscan, Hittite via Rasmussen's independent sign values). Includes sensitivity analyses (sign 02 determinative vs phonetic; sign 18 TI vs RJU; allograph merge), two circularity controls (uniform reshuffling and frequency-weighted reshuffling), a leave-PD-inspired-out ablation, a 28-card extended-analysis battery (entropy, Bayes factors, positional structure, Davis-style replication, etc.), and continuous-integration gates (verify-bundle, verify-canonical, verify-prose, verify-engine-invariants, verify-framing, plus engine math unit tests) that enforce consistency between the engine output and every numerical claim made in the accompanying manuscript. Companion paper: A Reproducible Multi-Language Statistical Test of Phonetic Readings for the Phaistos Disc (Shandrokha 2026).",
+  "creators": [
+    {
+      "name": "Shandrokha, Shiarhei",
+      "affiliation": "Independent researcher",
+      "orcid": "0009-0000-3345-7531"
+    }
+  ],
+  "keywords": [
+    "Phaistos Disc",
+    "Linear A",
+    "Minoan",
+    "undeciphered scripts",
+    "Monte Carlo simulation",
+    "computational archaeology",
+    "Bronze Age Aegean",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://shandrokha.github.io/phaistos-disc/app/",
+      "relation": "isDocumentedBy",
+      "resource_type": "other"
+    }
+  ],
+  "_comment_preprint": "Once the arXiv preprint has a DOI, append to related_identifiers: { \"identifier\": \"10.48550/arXiv.<NNNN.NNNNN>\", \"relation\": \"isSupplementTo\", \"resource_type\": \"publication-preprint\" }.",
+  "_comment_journal": "Once the journal version is in press or published, append: { \"identifier\": \"<journal DOI>\", \"relation\": \"isSupplementTo\", \"resource_type\": \"publication-article\" }."
+}
