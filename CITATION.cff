@@ -1,6 +1,5 @@
 # Citation metadata for the Phaistos Disc workbench.
 # Schema: https://citation-file-format.github.io/
-# Once a Zenodo concept DOI is minted, set the top-level `doi:` field below.
 # When both this file and `.zenodo.json` are present, Zenodo uses
 # `.zenodo.json` for the release archive metadata; this file is used by
 # GitHub's "Cite this repository" panel.
@@ -10,7 +9,15 @@ message: "If you use this software in academic work, please cite it as below."
 title: "Phaistos Disc Statistical Analysis Workbench"
 type: software
 version: 1.0.0
-date-released: 2026-05-10
+date-released: 2026-05-18
+doi: "10.5281/zenodo.20267825"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20267825"
+    description: "Concept DOI (resolves to the latest version)"
+  - type: doi
+    value: "10.5281/zenodo.20267826"
+    description: "Version DOI for v1.0.0"
 license: CC-BY-SA-4.0
 repository-code: "https://github.com/shandrokha/phaistos-disc"
 url: "https://shandrokha.github.io/phaistos-disc/app/"

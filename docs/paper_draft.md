@@ -521,7 +521,7 @@ We gratefully acknowledge Gareth Owens for the Daidalika signary (TEI Crete / He
 
 ### Code and data availability
 
-The complete analysis workbench and all data files are available at https://github.com/shandrokha/phaistos-disc under CC BY-SA 4.0. The published artifact is a static browser application: open `app/index.html` in any modern browser to view pre-computed results, or click "Run" to re-execute any Monte Carlo simulation live. For local development, run `npm install && npm run build && npm run serve` from the repository root. The analysis requires no server — all computation runs client-side using seeded pseudorandom number generators (mulberry32) for deterministic reproducibility.
+The complete analysis workbench and all data files are available at https://github.com/shandrokha/phaistos-disc under CC BY-SA 4.0, with each tagged release archived on Zenodo: the concept DOI [10.5281/zenodo.20267825](https://doi.org/10.5281/zenodo.20267825) resolves to the latest version, and the snapshot accompanying this paper is v1.0.0 ([10.5281/zenodo.20267826](https://doi.org/10.5281/zenodo.20267826)). The published artifact is a static browser application: open `app/index.html` in any modern browser to view pre-computed results, or click "Run" to re-execute any Monte Carlo simulation live. For local development, run `npm install && npm run build && npm run serve` from the repository root. The analysis requires no server — all computation runs client-side using seeded pseudorandom number generators (mulberry32) for deterministic reproducibility.
 
 ---
 
