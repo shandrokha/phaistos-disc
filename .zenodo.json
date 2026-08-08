@@ -28,8 +28,13 @@
       "identifier": "https://shandrokha.github.io/phaistos-disc/app/",
       "relation": "isDocumentedBy",
       "resource_type": "other"
+    },
+    {
+      "identifier": "10.5281/zenodo.21850622",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint"
     }
   ],
-  "_comment_preprint": "Once the arXiv preprint has a DOI, append to related_identifiers: { \"identifier\": \"10.48550/arXiv.<NNNN.NNNNN>\", \"relation\": \"isSupplementTo\", \"resource_type\": \"publication-preprint\" }.",
+  "_comment_preprint": "The Zenodo preprint concept DOI above resolves to the latest version of the paper. If an arXiv version is ever announced, append: { \"identifier\": \"10.48550/arXiv.<NNNN.NNNNN>\", \"relation\": \"isSupplementTo\", \"resource_type\": \"publication-preprint\" }.",
   "_comment_journal": "Once the journal version is in press or published, append: { \"identifier\": \"<journal DOI>\", \"relation\": \"isSupplementTo\", \"resource_type\": \"publication-article\" }."
 }

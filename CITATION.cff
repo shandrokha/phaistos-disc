@@ -54,10 +54,7 @@ preferred-citation:
       email: siarhei.shandrokha@gmail.com
       orcid: "https://orcid.org/0009-0000-3345-7531"
   year: 2026
-  # Once the preprint or journal version has a DOI, fill these in:
-  # doi: "10.48550/arXiv.<NNNN.NNNNN>"   # for arXiv preprint
-  # journal: "Oxford Journal of Archaeology"
-  # volume:
-  # issue:
-  # start:
-  # end:
+  doi: "10.5281/zenodo.21850622"
+  # Concept DOI of the Zenodo preprint; resolves to the latest version.
+  # If a journal version appears, replace the doi above with the journal DOI
+  # and add: journal / volume / issue / start / end.

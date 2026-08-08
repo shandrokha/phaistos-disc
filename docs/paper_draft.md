@@ -519,6 +519,10 @@ The remaining items below are recorded as proposals for new analytical, software
 
 We gratefully acknowledge Gareth Owens for the Daidalika signary (TEI Crete / Hellenic Mediterranean University) and his underlying scholarship on Minoan (Owens 1999, 2007), which provide the correspondence table on which this study is built; Brent Davis for the syllabotactic framework that established the PD–LA linguistic relationship; and P. Jackson Macdonald, Thomas Timm, and Yves Duhoux for the structural baseline data against which our transcription is verified.
 
+### Conflict of interest disclosure
+
+The author declares that he complies with the PCI rule of having no financial conflicts of interest in relation to the content of the article. No funding was received for this work, which was conducted on personal time without institutional support.
+
 ### Code and data availability
 
 The complete analysis workbench and all data files are available at https://github.com/shandrokha/phaistos-disc under CC BY-SA 4.0, with each tagged release archived on Zenodo: the concept DOI [10.5281/zenodo.20267825](https://doi.org/10.5281/zenodo.20267825) resolves to the latest version, and the snapshot accompanying this paper is v1.0.0 ([10.5281/zenodo.20267826](https://doi.org/10.5281/zenodo.20267826)). The published artifact is a static browser application: open `app/index.html` in any modern browser to view pre-computed results, or click "Run" to re-execute any Monte Carlo simulation live. For local development, run `npm install && npm run build && npm run serve` from the repository root. The analysis requires no server — all computation runs client-side using seeded pseudorandom number generators (mulberry32) for deterministic reproducibility.
